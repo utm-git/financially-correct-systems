@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: idempotent-payment-processor
+  datasource:
+    url: jdbc:postgresql://localhost:5432/payment_db
+    username: user
+    password: password
+    driver-class-name: org.postgresql.Driver
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
+  kafka:
+    bootstrap-servers: localhost:9092
+    listener:
+      ack-mode: MANUAL_IMMEDIATE
+    consumer:
+      group-id: payment-processor-group
+      auto-offset-reset: earliest
+      enable-auto-commit: false
