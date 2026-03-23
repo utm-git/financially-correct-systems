@@ -1,0 +1,4 @@
+com/financiallycorrect/payment/OutboxRelay.class
+com/financiallycorrect/payment/PaymentApplication.class
+com/financiallycorrect/payment/PaymentService.class
+com/financiallycorrect/payment/PaymentConsumer.class

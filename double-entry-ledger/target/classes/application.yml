@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: double-entry-ledger
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ledger_db
+    username: user
+    password: password
+    driver-class-name: org.postgresql.Driver
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
